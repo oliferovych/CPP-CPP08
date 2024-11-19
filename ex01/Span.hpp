@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:27:51 by dolifero          #+#    #+#             */
-/*   Updated: 2024/11/19 15:58:19 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/11/19 16:05:05 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class Span
 		~Span();
 		//Methods
 		void addNumber(int n);
+		void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 		int shortestSpan();
 		int longestSpan();
 	//Exceptions

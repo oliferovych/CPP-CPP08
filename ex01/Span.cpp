@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:32:09 by dolifero          #+#    #+#             */
-/*   Updated: 2024/11/19 15:59:01 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/11/19 16:05:20 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,13 @@ void Span::addNumber(int n)
 	if(_v.size() >= _N)
 		throw FullException();
 	_v.push_back(n);
+}
+
+void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+	if(_v.size() + distance(begin, end) > _N)
+		throw FullException();
+	_v.insert(_v.end(), begin, end);
 }
 
 int Span::shortestSpan()
