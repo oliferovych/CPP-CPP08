@@ -6,14 +6,15 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:33:56 by dolifero          #+#    #+#             */
-/*   Updated: 2024/11/18 15:13:25 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/11/19 15:22:23 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef EASYFIND_HPP
 # define EASYFIND_HPP
 
-#include <iostream>
+# include <iostream>
+# include <algorithm>
 
 class NotFoundException : public std::exception
 {
@@ -24,12 +25,14 @@ class NotFoundException : public std::exception
 };
 
 template <typename T>
-T easyfind(T &container, int n)
+typename T::iterator easyfind(T &container, int n)
 {
-	typename T::iterator it = std::find(container.begin(), container.end(), n);
-	if (it != n)
+	typename T::iterator it;
+
+	it = std::find(container.begin(), container.end(), n);
+	if(it == container.end())
 		throw NotFoundException();
-	return *it;
+	return (it);
 }
 
 #endif
