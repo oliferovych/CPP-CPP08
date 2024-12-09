@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 02:34:05 by dolifero          #+#    #+#             */
-/*   Updated: 2024/11/28 03:07:40 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/12/09 16:24:20 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main()
 {
 	MutantStack<int> mstack;
-	std::list<int> l;
+	std::list<int> l; // comparing to the list as it is a container that has iterators in STL
 
 	std::cout << "	Functional test" << std::endl;
 	mstack.push(5);
@@ -49,7 +49,6 @@ int main()
 	++it;
 	--it;
 	while (it != ite && itl != itle)
-
 	{
 		std::cout << "Mstack element " << *it << std::endl;
 		std::cout << "List element " << *itl << std::endl;

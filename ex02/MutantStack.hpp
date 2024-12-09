@@ -6,14 +6,14 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 01:54:14 by dolifero          #+#    #+#             */
-/*   Updated: 2024/11/28 03:07:55 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/12/09 16:17:44 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MUTANTSTACK_HPP
 # define MUTANTSTACK_HPP
 
-# include <stack>
+#include <stack>
 
 template <typename T>
 class MutantStack : public std::stack<T>
