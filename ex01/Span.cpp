@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:32:09 by dolifero          #+#    #+#             */
-/*   Updated: 2024/11/19 16:05:20 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/12/09 16:30:10 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ Span::~Span()
 {
 	if(!_v.empty())
 		_v.clear();
-	std::cout << "Destructor called" << std::endl;
 }
 
 void Span::addNumber(int n)

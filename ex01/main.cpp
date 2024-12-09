@@ -6,7 +6,7 @@
 /*   By: dolifero <dolifero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:33:42 by dolifero          #+#    #+#             */
-/*   Updated: 2024/11/19 16:01:07 by dolifero         ###   ########.fr       */
+/*   Updated: 2024/12/09 16:28:41 by dolifero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,13 @@ int main(void)
 	std::cout << "Longest span: " << sp2.longestSpan() << std::endl;
 	std::cout << std::endl;
 
+	std::vector<int> v;
+	for(int i = 0; i < 10; i++)
+		v.push_back(dis0(gen));
+	Span sp3 = Span(10);
+	sp3.addNumber(v.begin(), v.end());
+	std::cout << "10 random numbers in the range of 1 to 100 added to span at once" << std::endl;
+	std::cout << "Shortest span: " << sp3.shortestSpan() << std::endl;
+	std::cout << "Longest span: " << sp3.longestSpan() << std::endl;
 	return (0);
 }
